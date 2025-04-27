@@ -1,0 +1,72 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec  5 10:21:25 2023
+| Host         : zhangyuzhe running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file DDS_top_control_sets_placed.rpt
+| Design       : DDS_top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    28 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              34 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           12 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              39 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+
+|                            Clock Signal                            |                Enable Signal                |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++--------------------------------------------------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+
+|  rom/ip_rom/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[7] |                                             | rom/shi_ji_zhi_reg[0]                       |                1 |              1 |
+|  sys_clk_IBUF_BUFG                                                 |                                             |                                             |                2 |              2 |
+|  wave_s                                                            | fen_pin_qi/freq_m                           | measure_shiji_f_inst/lock[0]_i_1_n_0        |                4 |             13 |
+|  wave_s                                                            | fen_pin_qi/lock_reg[0]                      | measure_shiji_f_inst/lock[0]_i_1_n_0        |                4 |             13 |
+|  wave_s                                                            | measure_shiji_f_inst/shi_ji_zhi[12]_i_2_n_0 | measure_shiji_f_inst/shi_ji_zhi[12]_i_1_n_0 |                5 |             13 |
+|  sys_clk_IBUF_BUFG                                                 |                                             | fen_pin_qi/clear                            |                4 |             14 |
+|  sys_clk_IBUF_BUFG                                                 |                                             | fen_pin_qi/cnt_05[0]_i_1_n_0                |                7 |             28 |
+|  fen_pin_qi/clk_BUFG                                               |                                             |                                             |               19 |             32 |
++--------------------------------------------------------------------+---------------------------------------------+---------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 2      |                     1 |
+| 13     |                     3 |
+| 14     |                     1 |
+| 16+    |                     2 |
++--------+-----------------------+
+
+
